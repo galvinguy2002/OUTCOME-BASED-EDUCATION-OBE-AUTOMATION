@@ -1,0 +1,110 @@
+.table1{
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:20px;
+    border-collapse: collapse;
+    box-shadow: 0 20px 20px  #F6F5F5;
+    border-radius:9px 9px;
+    overflow: hidden;
+
+}
+.table2{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:15px;
+    border-collapse: collapse;
+    box-shadow: 0 20px 20px  #F6F5F5;
+    border-radius:9px 9px;
+    overflow: hidden;
+
+}
+
+
+
+
+.table3{
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:20px;
+    border-collapse: collapse;
+    box-shadow: 0 20px 20px  #F6F5F5;
+    border-radius:9px 9px;
+    overflow: hidden;
+
+}
+
+.table1 thead tr{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color:black;
+    background-image: linear-gradient( #47B5FF, #ABC9FF);
+
+}
+
+
+.table2 thead tr{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color:black;
+    background-image: linear-gradient( #47B5FF, #ABC9FF);
+
+}
+
+.table3 thead tr{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color:black;
+    background-image: linear-gradient( #47B5FF, #ABC9FF);
+
+}
+
+
+
+
+
+
+
+
+.table1 th, .table1 td{
+    padding:12px 15px;
+}
+
+
+.table2 th, .table1 td{
+    padding:12px 15px;
+}
+
+
+.table3 th, .table1 td{
+    padding:12px 15px;
+}
+
+
+.table1 tbody tr:nth-child(even){
+    background-color: #fff;
+}
+.table1 tbody tr:nth-child(odd){
+    background-color: #FFDEDE;
+}
+
+.table1 tbody tr:last-of-type{
+    border-bottom: 6px #FF8B8B;
+
+}
+
+.table1 tbody tr:hover{
+    color: #FF8B8B;
+    font-weight: bold;
+    border-top:2px solid #FF8B8B;
+    border-bottom: 2px solid #FF8B8B;
+    cursor: progress;
+    text-transform: uppercase;
+}
+
+

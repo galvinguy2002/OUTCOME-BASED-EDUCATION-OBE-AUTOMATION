@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(141, 209, 234);
+}
+table, tr, td {
+    align-content: center;
+    border: 1px solid;
+  }
+    tr {
+      height: 50px;
+    }
+    td {
+      text-align: center;
+    }
+    tr:hover {background-color: rgb(207, 227, 104);}
+    .container {
+        border: 1px solid;
+        width:60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size:20px;
+        border-collapse: collapse;
+        box-shadow: 0 20px 20px  #F6F5F5;
+        border-radius:9px 9px;
+        overflow: hidden;
+    
+      }
+#maintab{
+text-align: center;
+}

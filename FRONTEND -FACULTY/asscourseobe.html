@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      background-color: #e0baba;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/path/to/cdn/bootstrap.min.css" />
+<script src="/path/to/cdn/jquery.slim.min.js"></script>
+<script src="/path/to/cdn/bootstrap.min.js"></script>
+<link rel="stylesheet" href="sidebar.css">
+  <title>OBE ASSIGNED COURSE</title>
+</head>
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Welcome to JIIT</h3>
+      </div>
+      <ul class="lisst-unstyled components">
+        <p>Main Menu</p>
+        <li class="active">
+          <a href="#foodSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">DropDown MENU</a>
+          <ul class="collapse lisst-unstyled" id="foodSubmenu">
+            <li><a href="emanage.html">Manage Exams</a></li>
+            <li><a href="#">Exam Attendance</a></li>
+            <li><a href="rep.html">Reports</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">Goto HOME</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="content">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button type="button" id="sidebarCollapse" class="btn btn-dark">
+            <i class="fas fa-bars"></i><span> Toggle Sidebar</span>
+          </button>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Course Code</th>
+                  <th scope="col">Course Title</th>
+                  <th scope="col">Credit </th>
+                  <th scope="col">Section</th>
+                  <th scope="col">Semester</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">18B156</th>
+                  <td>OPERATING SYSTEMS</td>
+                  <td>3</td>
+                  <td>B15</td>
+                  <td>6</td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Assign CO marks<i class="far fa-eye"></i></button>
+                    <button type="button" class="btn btn-success">Submit Course Component<i class="fas fa-edit"></i></button>
+                  <button type="button" class="btn btn-danger">Assign Student Marks<i class="far fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">20B15622</th>
+                  <td>NETWORKS AND SECURITY</td>
+                  <td>3</td>
+                  <td>A7</td>
+                  <td>5</td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Assign CO marks<i class="far fa-eye"></i></button>
+                    <button type="button" class="btn btn-success">Submit Course Component<i class="fas fa-edit"></i></button>
+                  <button type="button" class="btn btn-danger">Assign Student Marks<i class="far fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">15C234</th>
+                  <td>FINANCIAL MANAGE</td>
+                  <td>4</td>
+                  <td>A10</td>
+                  <td>3</td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Assign CO marks<i class="far fa-eye"></i></button>
+                    <button type="button" class="btn btn-success">Submit Course Component<i class="fas fa-edit"></i></button>
+                  <button type="button" class="btn btn-danger">Assign Student Marks<i class="far fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Open+sans&display=swap');
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana, sans-serif';
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      #EDF6E5 0%,
+      #f0f8e9 50%,
+      #daf5cb 50%,
+      #daf5cb 100%
+    );
+
+}
+
+#header1{
+    text-align: center;
+    color: rgb(185, 79, 37);
+    display: inline;
+    align-self: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+body{
+    color: antiquewhite;
+}
+#pic2{
+    display: inline-block;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+  }
+
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="newnav.css">
+    <link rel="stylesheet" href="mapco.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   </head>
+   <title>SET COMPONENT MARKS</title>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-grid-alt'></i>
+        <div class="logo_name">Our services</div>
+        <br>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="links_name">Assign Course</span>
+        </a>
+        <span class="tooltip">Assign_Course</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Student Data</span>
+       </a>
+       <span class="tooltip">Student Data</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Course</span>
+       </a>
+       <span class="tooltip">Course</span>
+     </li>
+     <li>
+      <a href="#">
+        <i class='bx bx-folder' ></i>
+        <span class="links_name">Course Mapping</span>
+      </a>
+      <span class="tooltip">Course Mapping</span>
+    </li>
+    <li>
+       <a href="#">
+        <i class="fa fa-book" ></i>
+         <span class="links_name">Select Course<br> Component marks</span>
+       </a>
+       <span class="tooltip">Select Course Component marks</span>
+     </li>
+     <li>
+      <a href="#">
+        <i class="material-icons">computer</i>
+        <span class="links_name">Assign Student Marks</span>
+      </a>
+      <span class="tooltip">Assign Student Marks</span>
+    </li>
+    <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Logout</span>
+       </a>
+       <span class="tooltip">Logout</span>
+     </li>    
+    </ul>
+  </div>
+ 
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+
+<div class="container">
+<table>
+    <thead>
+        <tr>
+            <th>ASSIGNMENT AREA</th>
+            <th>CO1</th>
+            <th>CO2</th>
+            <th>CO3</th>
+            <th>CO4</th>
+            <th>CO5</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ASSIGNMENT</td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+        </tr>
+        <tr>
+            <td>T1 T2 T3</td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+        </tr>
+        <tr>
+            <td>PROJECT</td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+        </tr>
+        <tr>
+            <td>TA</td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+        </tr>
+        <tr>
+            <td>QUIZ</td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+            <td><input type="number" id="quantity"min="0"></td>
+        </tr>
+
+
+
+    </tbody>
+</table>
+
+</div>
+
+</body>
+
+</html>

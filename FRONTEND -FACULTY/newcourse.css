@@ -1,0 +1,58 @@
+.table-image td, .table-image th {
+    vertical-align: middle;
+  }
+  .button{
+    border: 2px solid #a31844;
+  }
+  .button:hover {
+    background-color: #9dc49e;
+    color: white;
+  }
+  .container{
+    padding: top 100px;;
+    font-size: large;
+    text-indent: 40px;
+  }
+  table, th, td {
+    border: 1px solid;
+  }
+    th {
+      height: 50px;
+    }
+    td {
+      text-align: center;
+    }
+    tr:hover {background-color: rgb(91, 182, 221);}
+    .button{
+      color:#B1E693;
+    }
+    .btn{
+      transition-duration: 0.4s;
+    }
+    
+    .btn:hover {
+      background-color: #c55959;
+      color: white;
+    }
+    .container {
+      border: 1px solid;
+      width:60%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size:20px;
+      border-collapse: collapse;
+      box-shadow: 0 20px 20px  #F6F5F5;
+      border-radius:9px 9px;
+      overflow: hidden;
+  
+    }
+    .container{
+        padding: top 100px;;
+        font-size: large;
+        text-indent: 40px;
+      }
+      .wrapper {
+        display: flex;
+        text-decoration: none;
+        transition: all 0.4s;
+      }

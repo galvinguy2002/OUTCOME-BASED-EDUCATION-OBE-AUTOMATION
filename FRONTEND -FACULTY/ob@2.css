@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Open+sans&display=swap');
+body{
+    font-family: 'Open Sans',sans-serif;
+    background: #5191d1;
+}
+nav{
+    position: relative;
+    margin: 270px auto 0;
+    width: 750px;
+    height:60px;
+    background: #dcb076;
+    border-radius:8px ;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration:none;
+    line-height:50px;
+    position:relative;
+    z-index:1;
+    display:inline block;
+    text-align: centre;
+}
+nav-animation{
+    position: absolute;
+    height:100%;
+    top:0;
+    z-index:0;
+    background: #bc1a99;
+    border-radius: 8px;
+    transition:all .5s ease 0s;
+}
+nav a:nth-child(1){
+    width:100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+    width: 100px;
+    left:0;
+}
+nav a:nth-child(2){
+    width:110px;
+}
+nav .start-home, a:nth-child(2):hover~.animation{
+    width: 110px;
+    left:100;
+}nav a:nth-child(3){
+    width:100px;
+}
+nav .start-home, a:nth-child(3):hover~.animation{
+    width: 100px;
+    left:210;
+}nav a:nth-child(4){
+    width:160px;
+}
+nav .start-home, a:nth-child(4):hover~.animation{
+    width: 160px;
+    left:310;
+}nav a:nth-child(5){
+    width:120px;
+}
+nav .start-home, a:nth-child(5):hover~.animation{
+    width: 120px;
+    left:470;
+}
+

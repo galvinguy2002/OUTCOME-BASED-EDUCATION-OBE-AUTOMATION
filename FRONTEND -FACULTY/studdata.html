@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="newnav.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="studdata.css">
+   </head>
+   <style>
+table, td {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+   </style>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-grid-alt'></i>
+        <div class="logo_name">Our services</div>
+        <br>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="links_name">Assign Course</span>
+        </a>
+        <span class="tooltip">Assign_Course</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Student Data</span>
+       </a>
+       <span class="tooltip">Student Data</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Course</span>
+       </a>
+       <span class="tooltip">Course</span>
+     </li>
+     <li>
+      <a href="#">
+        <i class='bx bx-folder' ></i>
+        <span class="links_name">Course Mapping</span>
+      </a>
+      <span class="tooltip">Course Mapping</span>
+    </li>
+    <li>
+       <a href="#">
+        <i class="fa fa-book" ></i>
+         <span class="links_name">Select Course<br> Component marks</span>
+       </a>
+       <span class="tooltip">Select Course Component marks</span>
+     </li>
+     <li>
+      <a href="#">
+        <i class="material-icons">computer</i>
+        <span class="links_name">Assign Student Marks</span>
+      </a>
+      <span class="tooltip">Assign Student Marks</span>
+    </li>
+    <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Logout</span>
+       </a>
+       <span class="tooltip">Logout</span>
+     </li>    
+    </ul>
+  </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+  <div id="maintab">
+    Student Data
+  <table id="myTable">
+    <tr>
+      <td><b>NAME</td>
+      <td><b>ENROLLMENT NUMBER</td>
+      <td><b>BATCH</td>
+    </tr>
+    <tr>
+      <td>student</td>
+      <td>XXXXX</td>
+      <td>1212</td>
+    </tr>
+    <tr>
+      <td>student</td>
+      <td>XXXXX</td>
+      <td>1212</td>
+    </tr>
+  </table>
+  <br>
+  
+  <button onclick="myCreateFunction()">Create row</button>
+  <button onclick="myDeleteFunction()">Delete row</button>
+  
+  <script>
+  function myCreateFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(3);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.inserCell(2);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+    cell3.innerHTML = "NEW CELL3";
+  }
+  
+  function myDeleteFunction() {
+    document.getElementById("myTable").deleteRow(0);
+  }
+  </script>
+  </div>
+</body>
+
+</html>
+ 

@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="new.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     
+
+     <link rel="stylesheet"  href="table.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+  
+   </head>
+<body>
+ <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-grid-alt'></i>
+        <div class="logo_name">Our services</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="hod_dashboard.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="new.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Department</span>
+       </a>
+       <span class="tooltip">Department</span>
+     </li>
+     <li>
+       <a href="coursetb.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Course</span>
+       </a>
+       <span class="tooltip">Course</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Assign Course</span>
+       </a>
+       <span class="tooltip">Assign Course</span>
+     </li>
+     <li>
+       <a href="componenttb.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Set Component</span>
+       </a>
+       <span class="tooltip">Set Component</span>
+     </li>
+     <li>
+       <a href="index.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Logout</span>
+       </a>
+       <span class="tooltip">Logout</span>
+     </li>
+    <!---- <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>-->
+   <!---  <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>-->
+    
+    </ul>
+<script>
+
+
+
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+  </div>
+ 
+
+
+
+
+
+
+<div class="container">
+    <h1 align=" center">Course</h1>
+    
+    <form method="POST" name="sample" align=" center">
+    <br>
+        Course Name: <input type="text" name="course_name"> <br> <br>
+        Course Code: <input type="text" name="course_code"><br><br>
+        Course Credit: <input type="text" name="course_credit">
+        <br><br>
+        <input type="button" name="add" value="Add Data" onclick="addStudent();" class="btn btn-success">
+        <br><br>
+    
+                <table id="tbl" class="table2" align="center">
+                    <thead>
+                    <th>Course Name</th> 
+                    <th>Course Code</th> 
+                    <th>Course Credit</th> 
+    
+                   <!--- <th>Name</th>--->
+                    <th> Delete</th>
+                    <th>Update</th>
+                   
+                    </thead>
+                    
+                     <tbody>
+                         
+                     </tbody>
+                 </table>
+    
+    </form>
+    
+     <script type="text/javascript">
+           
+        function addStudent()
+        { 
+            var course_name=document.sample.course_name.value; 
+            var course_code=document.sample.course_code.value; 
+            var course_credit=document.sample.course_credit.value; 
+            
+            var tr = document.createElement('tr');
+            
+            var td1 = tr.appendChild(document.createElement('td'));
+            var td2 = tr.appendChild(document.createElement('td'));
+            var td3 = tr.appendChild(document.createElement('td'));
+            var td4 = tr.appendChild(document.createElement('td'));
+            var td5 = tr.appendChild(document.createElement('td'));
+            //var td4 = tr.appendChild(document.createElement('td'));
+            
+            
+            td1.innerHTML=course_name;
+            td2.innerHTML=course_code;
+            td3.innerHTML=course_credit;
+            td4.innerHTML='<input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger">'
+            td5.innerHTML='<input type="button" name="up" value="Update" onclick="UpStud(this);" class="btn btn-primary">'
+    
+            document.getElementById("tbl").appendChild(tr);
+        }
+    
+        function UpStud(stud){
+             var course_name=document.sample.course_name.value; 
+             var course_code=document.sample.course_code.value; 
+             var course_credit=document.sample.course_credit.value; 
+            var s = stud.parentNode.parentNode;
+            var tr = document.createElement('tr');
+            
+            var td1 = tr.appendChild(document.createElement('td'));
+            var td2 = tr.appendChild(document.createElement('td'));
+            var td3 = tr.appendChild(document.createElement('td'));
+            var td4 = tr.appendChild(document.createElement('td'));
+            var td5 = tr.appendChild(document.createElement('td'));
+            
+            
+            td1.innerHTML='<input type="text" name="course_name">';
+            td2.innerHTML='<input type="text" name="course_code">';
+            td3.innerHTML='<input type="text" name="course_credit">';
+            td4.innerHTML='<input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger">'
+            td5.innerHTML='<input type="button" name="up" value="Update" onclick="addUpStud(this);" class="btn btn-primary">'
+    
+            document.getElementById("tbl").replaceChild(tr, s);
+        }
+    
+        function addUpStud(stud){
+            var course_name=document.sample.course_name.value; 
+            var course_code=document.sample.course_code.value; 
+            var course_credit=document.sample.course_credit.value; 
+    
+            var s = stud.parentNode.parentNode;
+            var tr = document.createElement('tr');
+            
+            var td1 = tr.appendChild(document.createElement('td'));
+            var td2 = tr.appendChild(document.createElement('td'));
+            var td3 = tr.appendChild(document.createElement('td'));
+            var td4 = tr.appendChild(document.createElement('td'));
+            var td5 = tr.appendChild(document.createElement('td'));
+            
+            
+            td1.innerHTML=course_name;
+            td2.innerHTML=course_code;
+            td3.innerHTML=course_credit;
+            td4.innerHTML='<input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger">'
+            td5.innerHTML='<input type="button" name="up" value="Update" onclick="UpStud(this);" class="btn btn-primary">'
+    
+            document.getElementById("tbl").replaceChild(tr, s);
+        }
+    
+        function delStudent(Stud){
+            var s=Stud.parentNode.parentNode;
+            s.parentNode.removeChild(s);
+        }
+        
+        
+        </script>
+    </div>
+        </body>
+        </html>
